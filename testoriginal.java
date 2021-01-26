@@ -42,11 +42,11 @@ public class testoriginal {
                 if(a <= 0) {
                     System.out.println("Not a valid number! Please choose an option again:");
                 }
-            } while (a <= 0);//firstly go 'do'. Then if a<0, continue. if a> 0, stop the loop
+            } while (a <= 0);//firstly go 'do'. Then if a <= 0, continue. if a > 0, stop the loop
 
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/sys2021","root","elevis123");
+            Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/sys2021","root","******");
 
             PreparedStatement p;
 
@@ -252,6 +252,8 @@ public class testoriginal {
 
 
     }
+    
+    //build table format (https://blog.csdn.net/weixin_44833195/article/details/106371410?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_baidulandingword-6&spm=1001.2101.3001.4242)
     public void printResult(String[] A) {
         String[] tempA = A[0].split(",");
         int maxLen = tempA.length;
@@ -302,7 +304,7 @@ public class testoriginal {
         }
         System.out.println(opera);
         return;
-    }//build table format (https://blog.csdn.net/weixin_44833195/article/details/106371410?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_baidulandingword-6&spm=1001.2101.3001.4242)
+    }
 
 
 }
