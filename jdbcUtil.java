@@ -17,7 +17,7 @@ public class jdbcUtil {
     public Connection createConnection(){
 
         try{
-            c = DriverManager.getConnection("jdbc:mysql://localhost:3306/sys2021", "root","elevis123");
+            c = DriverManager.getConnection("jdbc:mysql://localhost:3306/sys2021", "root","*****");
         } catch (SQLException e){
             e.printStackTrace();
             System.out.println("Connection Object creation failed");
